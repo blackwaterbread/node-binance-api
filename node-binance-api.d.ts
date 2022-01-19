@@ -1057,6 +1057,9 @@ declare module "node-binance-api" {
         deliveryPositionRisk(params?: any): Promise<any>;
         deliveryPositionRisk(...args: any): any;
 
+        deliveryFundingRate(params?: any): Promise<any>;
+        deliveryFundingRate(...args: any): any;
+
         deliveryLeverageBracket(symbol?: _symbol, params?: any): Promise<any>;
         deliveryLeverageBracket(...args: any): any;
 

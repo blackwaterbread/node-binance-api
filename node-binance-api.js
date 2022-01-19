@@ -4319,6 +4319,11 @@ let api = function Binance( options = {} ) {
             return promiseRequest( 'v1/positionRisk', params, { base:dapi, type:'SIGNED' } );
         },
 
+        deliveryFundingRate: async ( symbol, params = {} ) => {
+            params.symbol = symbol;
+            return promiseRequest( 'v1/fundingRate', params, { base:dapi } );
+        },
+
         deliveryLeverageBracket: async ( symbol = false, params = {} ) => {
             if ( symbol ) params.symbol = symbol;
             return promiseRequest( 'v1/leverageBracket', params, { base:dapi, type:'USER_DATA' } );
